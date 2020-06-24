@@ -434,28 +434,6 @@ static inline bool board_rc_singlewire(const char *device) { return false; }
 #endif
 
 /************************************************************************************
- * Name: board_rc_swap_rxtx
- *
- * Description:
- *   A board may define RC_SERIAL_SWAP_RXTX, so that RC_SERIAL_PORT is configured
- *   as UART with RX/TX swapped.
- *
- * Input Parameters:
- *   device: serial device, e.g. "/dev/ttyS0"
- *
- * Returned Value:
- *   true RX/RX should be swapped.
- *   false if not.
- *
- ************************************************************************************/
-
-#if defined(RC_SERIAL_SWAP_RXTX)
-static inline bool board_rc_swap_rxtx(const char *device) { return strcmp(device, RC_SERIAL_PORT) == 0; }
-#else
-static inline bool board_rc_swap_rxtx(const char *device) { return false; }
-#endif
-
-/************************************************************************************
  * Name: board_rc_invert_input
  *
  * Description:

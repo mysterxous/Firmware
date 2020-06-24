@@ -90,11 +90,9 @@ RCInput::init()
 		return -errno;
 	}
 
-	if (board_rc_swap_rxtx(_device)) {
 #if defined(TIOCSSWAP)
-		ioctl(_rcs_fd, TIOCSSWAP, SER_SWAP_ENABLED);
+	ioctl(_rcs_fd, TIOCSSWAP, SER_SWAP_ENABLED);
 #endif // TIOCSSWAP
-	}
 
 	// assume SBUS input and immediately switch it to
 	// so that if Single wire mode on TX there will be only

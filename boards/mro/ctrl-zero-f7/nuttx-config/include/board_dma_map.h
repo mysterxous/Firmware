@@ -89,8 +89,8 @@
 //  DMA2 Channel/Stream Selections
 //--------------------------------------------//---------------------------//----------------
 #define DMAMAP_SPI1_RX    DMAMAP_SPI1_RX_1    // DMA2, Stream 0, Channel 3    (SPI1 sensors RX)
-//      AVAILABLE                             // DMA2, Stream 1
-#define DMAMAP_USART6_RX  DMAMAP_USART6_RX_2  // DMA2, Stream 2, Channel 5
+#define DMAMAP_USART6_RX  DMAMAP_USART6_RX_1  // DMA2, Stream 1, Channel 5
+//      AVAILABLE                             // DMA2, Stream 2
 #define DMAMAP_SPI1_TX    DMAMAP_SPI1_TX_1    // DMA2, Stream 3, Channel 3    (SPI1 sensors TX)
 #define DMAMAP_SPI5_TX    DMAMAP_SPI5_TX_1    // DMA2, Stream 4, Channel 3    (SPI5 sensors TX)
 #define DMAMAP_SPI5_RX    DMAMAP_SPI5_RX_2    // DMA2, Stream 5, Channel 3    (SPI5 sensors RX)
