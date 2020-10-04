@@ -1,0 +1,74 @@
+#!/bin/sh
+#
+# @name Lumenier QAV-R (raceblade) 5" arms
+#
+# @type Quadrotor x
+# @class Copter
+#
+# @board px4_fmu-v2 exclude
+#
+# @maintainer James Goppert <james.goppert@gmail.com>
+#
+
+sh /etc/init.d/rc.mc_defaults
+
+set MIXER quad_x
+set PWM_OUT 1234
+
+if [ $AUTOCNF = yes ]
+then
+	# param set MC_ROLL_P 17.409999847412109375
+	# param set MC_ROLLRATE_P 0.073600001633167267
+	# param set MC_ROLLRATE_I 0.077500000596046448
+	# param set MC_ROLLRATE_D 0.001599999959580600
+
+	# param set MC_RR_INT_LIM 0.500000000000000000
+	# # param set MC_ROLLRATE_k 10.0
+
+	param set MC_ROLL_P	4.000000000000000000
+	param set MC_ROLLRATE_P	0.075000002980232239
+	param set MC_ROLLRATE_I	0.075000002980232239
+	param set MC_ROLLRATE_D	0.001599999959580600
+
+	param set MC_RR_INT_LIM 0.500000000000000000
+	param set MC_ROLLRATE_k 15.0
+	
+ 
+
+	param set MC_PITCH_P	4.000000000000000000
+
+	param set MC_PITCHRATE_P	0.072999998927116394
+	param set MC_PITCHRATE_I	0.072999998927116394
+	param set MC_PITCHRATE_D	0.002000000094994903
+	
+	param set MC_PR_INT_LIM 0.500000000000000000
+	param set MC_PITCHRATE_k 15.0
+
+
+	# param set MC_PITCH_P 14.329999923706054688
+
+	# param set MC_PITCHRATE_P 0.073600001633167267
+	# param set MC_PITCHRATE_I 0.073600001633167267
+	# param set MC_PITCHRATE_D 0.002000000094994903
+	
+	# param set MC_PR_INT_LIM 0.500000000000000000
+	# # param set MC_PITCHRATE_k 15.0
+
+
+	param set MC_YAW_P 4.780000209808349609
+
+	param set MC_YAWRATE_P 0.620000004768371582
+	param set MC_YAWRATE_I 0.061999998986721039
+	param set MC_YAWRATE_D 0
+
+	param set MC_YR_INT_LIM 0.500000000000000000
+	# param set MC_YAWRATE_k 5
+
+	param set MC_TPA_BREAK_P 0.7
+	param set MC_TPA_RATE_P 0.3
+
+	param set MPC_THR_MIN 0.06
+	param set MPC_MANTHR_MIN 0.06
+
+	param set PWM_MIN 1075
+fi

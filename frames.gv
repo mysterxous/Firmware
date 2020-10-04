@@ -1,0 +1,7 @@
+digraph G {
+"base_link" -> "world"[label="Broadcaster: /tf_generator\nAverage rate: 50.199 Hz\nMost recent transform: 1597193623.161 ( 0.007 sec old)\nBuffer length: 4.980 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1597193623.168"[ shape=plaintext ] ;
+ }->"base_link";
+}
